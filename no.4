@@ -1,0 +1,48 @@
+public class Main 
+public class SeniorCustomer extends Customer 
+ { 
+         final static double discount = 0.20; 
+          
+         double calculateBill(){ 
+           amount = amount - (amount * discount); 
+            return amount; 
+ } 
+          
+         SeniorCustomer(String name, int amount){ 
+           super(name, amount); 
+ } 
+          
+          
+ }
+ { 
+public static void main(String[] args) 
+ { 
+    Customer C; 
+    Customer rc = new RegularCustomer("Jimin", 1000); 
+    Customer sc = new SeniorCustomer("Suga", 1000); 
+          
+    C = rc; 
+    System.out.println(C.getName() + "(Regular Costumer)"); 
+    System.out.println("Total: $" + C.calculateBill()); 
+                  
+    C = sc; 
+    System.out.println(C.getName() + "(Senior Costumer)"); 
+    System.out.println("Total: $" + C.calculateBill()); 
+                               
+ } 
+          
+ }
+
+public class Main { 
+public static void main(String[] args) { 
+      Customer customer; 
+   RegularCustomer regularCustomer = new RegularCustomer("RM", 2000);
+   SeniorCustomer seniorCustomer = new SeniorCustomer("Jin", 2000);
+  
+      customer = regularCustomer; 
+      System.out.println(customer.getName()+" " +customer.calculateBill()); 
+  
+      customer = seniorCustomer; 
+      System.out.println(customer.getName()+" "+customer.calculateBill()); 
+         } 
+ }
